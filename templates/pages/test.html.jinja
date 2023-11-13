@@ -1,0 +1,27 @@
+{% extends 'base.html.jinja' %}
+{% block title %}
+    Страница для зарегестрированных
+{% endblock %}
+{% block content %}
+
+<div class="uk-width-1-1">
+
+    <div class="uk-margin-large">
+        <h1>auth test</h1>
+
+        {% if is_auth %}
+            <p>
+                auth: success<br>
+                {{ user.email }}
+            </p>
+        {% else %}
+            <p>
+                auth: not
+            </p>
+        {% endif %}
+
+    </div>
+
+</div>
+
+{% endblock %}

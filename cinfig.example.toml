@@ -1,0 +1,16 @@
+[utils]
+console_indent = '...'
+
+[db]
+host ='host'
+port = 5432
+db_name = 'db_name'
+db_user = 'db_user'
+db_password = 'db_password'
+
+[auth]
+secret_key = '2cGGAmgcGhVUUJ5PSI0GKLEcalglW2e4XQCBC6JVHfA='
+password_salt = '3d8dc8952b16e4ed950f1eb96077ed0bb110606e01f35857aefd8f7b76f208f2'
+algorithm = 'HS256'
+token_name = 'token'
+session_time = 30

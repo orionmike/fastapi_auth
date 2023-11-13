@@ -1,0 +1,41 @@
+{% extends 'base.html.jinja' %}
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+
+<div class="uk-cover-container uk-background-cover uk-flex uk-flex-center uk-flex-middle uk-height-viewport">
+    <div class="uk-align-center uk-text-center" style="margin-top: -200px;">
+
+        <h1>Register</h1>
+
+        <form class="auth_form">
+
+            <div class="uk-margin">
+                {# <label class="uk-form-label" for="username">login</label> #}
+                <div class="uk-form-controls">
+                    <input class="uk-input uk-form-width-medium" id="email" name="email" type="text" placeholder="test@test.com">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                {# <label class="uk-form-label" for="password">password</label> #}
+                <div class="uk-form-controls">
+                    <input class="uk-input uk-form-width-medium" id="password" name="password" type="password" placeholder="password">
+                </div>
+            </div>
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary">Отправить</button>
+            </div>
+
+        </form>
+
+        <div class="message"></div>
+        <script src="/static/js/register.js"></script>
+
+    </div>
+</div>
+
+
+{% endblock %}

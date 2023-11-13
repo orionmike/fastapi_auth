@@ -1,0 +1,30 @@
+{% extends 'base.html.jinja' %}
+
+{% block title %}
+    Welcome
+{% endblock %}
+
+{% block content %}
+
+<div class="uk-cover-container uk-background-cover uk-flex uk-flex-center uk-flex-middle uk-height-viewport">
+    <div class="uk-align-center uk-text-center" style="margin-top: -200px;">
+        <div class="uk-child-width-1-2@m" uk-grid>
+        <div>
+            <div>
+                <span class="uk-h2">
+                    <a href="{{ url_for("login_page") }}">login</a>
+                </span>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <span class="uk-h2">
+                    <a href="{{ url_for("register_page") }}">register</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
