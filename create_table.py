@@ -1,6 +1,6 @@
 
 
-from database import sync_engine, recreate_table_list
+from database import recreate_table_list, sync_engine
 from user.models import User
 
 if __name__ == '__main__':

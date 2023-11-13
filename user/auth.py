@@ -11,7 +11,6 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
 def verify_password(text_password, hashed_password) -> bool:
-    # print(hashed_password)
     text_password += PASSWORD_SALT
     return pwd_context.verify(text_password, hashed_password)
 
@@ -34,6 +33,5 @@ def create_access_token(data: dict) -> str:
 async def auth_user(email: EmailStr, password: str):
     user = await UserDAO.get_or_none(email=email)
     if user:
-        # print(verify_password(password, user.hashed_password))
         if verify_password(password, user.hashed_password):
             return user

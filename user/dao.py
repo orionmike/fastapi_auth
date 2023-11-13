@@ -1,12 +1,13 @@
 
 from sqlalchemy import insert
-from dao.base import BaseDAO
-from user.models import User
 
+from dao.base import BaseDAO
 from database import async_session_maker
+from user.models import User
 
 
 class UserDAO(BaseDAO):
+    """ class for User model """
     model = User
 
     @classmethod

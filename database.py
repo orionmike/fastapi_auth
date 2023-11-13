@@ -1,31 +1,29 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import DeclarativeBase, sessionmaker
-from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.engine import URL
-
+from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
+from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
 from config import *
 
-
 # postgresql
+
+# async case
 url_object = URL.create(
     "postgresql+asyncpg",
     username=config['db']['db_user'],
-    password=config['db']['db_password'],  # plain (unescaped) text
+    password=config['db']['db_password'],
     host=config['db']['host'],
     database=config['db']['db_name']
 )
 
-# print(url_object)
-
 engine = create_async_engine(url_object)
 async_session_maker = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
-
+# sync case
 sync_url_object = URL.create(
     "postgresql",
     username=config['db']['db_user'],
-    password=config['db']['db_password'],  # plain (unescaped) text
+    password=config['db']['db_password'],
     host=config['db']['host'],
     database=config['db']['db_name']
 )

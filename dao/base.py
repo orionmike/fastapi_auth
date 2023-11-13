@@ -3,6 +3,7 @@ from sqlalchemy import select, insert
 
 
 class BaseDAO:
+    """ base class for working with the database """
     model = None
 
     @classmethod

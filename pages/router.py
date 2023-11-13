@@ -65,7 +65,7 @@ async def test(request: Request, responce: Response):
 
 
 @router.get("/logout")
-async def logout(request: Request, responce: Response):
+async def logout(request: Request):
 
     # token = request.cookies.get(TOKEN_NAME)
     # print(token)
