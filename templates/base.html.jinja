@@ -10,35 +10,8 @@
 
 <body style="font-family: Arial, Tahoma, sans-serif">
 
-    <nav class="uk-navbar-container uk-margin uk-container uk-container-expand" uk-navbar>
-        <div class="uk-navbar-left">
-            <a class="uk-navbar-item uk-logo" href="/">Auth fastAPI</a>
-            <ul class="uk-navbar-nav">
+    {% include 'naviagtion.html.jinja' %}
 
-                <li>
-                    <a href="{{ url_for('login_page') }}">
-                        login
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('register_page') }}">
-                        register
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('logout') }}">
-                        logout
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('test') }}">
-                        test
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
     <main class="uk-container uk-container-expand">
         <div class="uk-container uk-container-expand uk-margin">
             {% block breadcrumps %} {% endblock %}
