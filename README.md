@@ -1,4 +1,5 @@
 # fastAPI simple auth with JWT
 
 - database: psotgreSQL
-- ORM: sqlalchemy
+- ORM: sqlalchemy 2.0
+- CSS framework: UIkit
