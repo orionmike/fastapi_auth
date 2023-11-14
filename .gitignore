@@ -1,22 +1,22 @@
 # Environments
 .env
 .venv
-env/
-venv/
+src/env/
+src/venv/
 
 # Byte-compiled / optimized / DLL files
-__pycache__/
+*__pycache__
 *.py[cod]
 *$py.class
 
 # Distribution / packaging
-build/
-dist/
-bat/
+src/build/
+src/dist/
+src/bat/
 *.spec
 
 # logs
-logs/
+src/logs/
 *.log
 
 # database:
@@ -27,7 +27,7 @@ logs/
 # other
 *.zip
 *.exe
-/static/scss
+src/static/scss
 
 
 # config
